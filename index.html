@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kalkulator BMI</title>
+        <link rel="stylesheet" href="index.css"/>
+    </head>
+    <body>
+        <!-- Halaman Pertama-->
+        <div id="kalkulator">
+            <div class="header_kalkulator">
+                <h1>Kalkulator BMI</h1>
+                <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan,
+                    berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? 
+                    <br> Yuk, hitung sekarang di kalkulator BMI.
+                </p>
+            </div>
+            <div class="inputform_card">
+                <form id="inputForm">
+                    <label class="text1">Jenis Kelamin</label><br>
+                    <!--Radio button jenis kelamin-->
+                    <div class="radio_button">
+                        <input type="radio" id="pria" name="jenis_kelamin" value="Pria">
+                        <label class="text1" for="pria">Pria</label>
+                        <input type="radio" id="wanita" name="jenis_kelamin" value="Wanita">
+                        <label class="text1" for="wanita">Wanita</label>
+                    </div>
+                    <br>
+                    <label class="text1">Berat Badan (kg)</label>
+                    <input class="text2" type="number" id="bb" name="berat_badan" autocomplete="off" required max="500"/>
+                    <br>
+                    <label class="text1">Usia (tahun)</label>
+                    <br>
+                    <input class="text2" type="number" id="usia" name="usia" autocomplete="off" required max="200"/>
+                    <br>
+                    <label class="text1">Tinggi Badan (cm)</label>
+                    <br>
+                    <input class="text2" type="number" id="tinggi" name="tinggi" autocomplete="off" required max="300"/>
+                    <br>
+                    <!--Button untuk menghitung dan reset -->
+                    <input class="main_button" type="button" value="Hitung BMI" onclick="checkForm()"/>
+                    <input class="reset_button" type="button" value="Reset" onclick="resetForm()"/>
+                </form>
+            </div>
+            <div>
+                <h2>Keunggulan fitur</h2>
+                <p>
+                    1. Menghitung berat badan<br>
+                    2. Menentukan kategori berat badan ideal atau tidak <br>
+                    3. Mempersiapkan program penurunan berat badan
+                    <br>
+                    <br>
+                    Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil tidak boleh mengandalkan pembacaan BMI ini) dan tidak
+                    ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter. 
+                    <br>
+                    <br>
+                    Kalkulator akan memberikan Anda gambaran tentang perbandingan berat banda Anda dengan nilai umum,
+                    Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat
+                    tinggi badan Anda (dalam meter) atau BMI = Kg/M2.
+                </p>
+                <br>
+                <br>
+            </div>
+            <div class="footer-identity">
+                <p>Download Aplikasi</p>
+                <div class="mobile-apps">
+                    <img src="./img/Google_Play_Store_Badge.png" alt="Image" height="42" width="142" />
+                    <img src="./img/AppStore_Badge.png" alt="Image" height="42" width="142" />
+                </div>
+                <p>
+                Software Engineering Fundamental Course | RevoU
+                <br>
+                Imaduddin Zakky Azizi | zakky.jbg@gmail.com
+                <br>
+                2023
+                </p>
+            </div>
+        </div>
+        <!--Halaman Kedua-->
+        <div id="hasil">
+            <div class="header_hasil">
+                <h1>Hasil</h1>
+            </div>
+
+            <!--Hasil perhitungan BMI-->
+            <div class="hasil_card">
+                <h3 id="statusbb1">Status Berat Badan</h3>
+                <h1 id="hasilBMI">Hasil BMI</h1>
+                <h4 id="statusbb2">Anda memiliki Status Berat Badan</h4>
+                <a class="main_button">Download Hasil BMI</a>
+            </div>
+
+            <!--Penjelasan hasil kalkulator BMI-->
+            <div>
+                <p id="explnBMI1">Penjelasan BMI</p>
+                <p id="explnBMI2">Penjelasan BMI 2</p>
+                <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu
+                    konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.
+                </p>
+                <br>
+                <a class="main_button" href="https://www.google.com/search?q=konsultasi+online+dengan+ahli+gizi" target="_blank" rel="noopener noreferrer">Pencarian Konsultasi Online Dengan Ahli Gizi Via Browser</a>
+                <a class="main_button" href="">Kembali ke Kalkulator</a>
+                <p>
+                <a class="main_button">Konsultasi Ahli Gizi Via Aplikasi</a>
+                <a class="main_button">Registrasi Online Ahli Gizi </a>
+                <br>
+                </p>
+                <p>BMI anda dapat dihitung dari nilai berat badan dan tinggi badan anda. Rumus dari perhitungan BMI seseorang adalah 
+                    berat badannya (dalam kilogram, kg) dibagi dengan pangkat dua dari tinggi badannya (dalam cm). Dengan angka yang 
+                    anda input pada form, kalkulator dapat menghitung nilai BMI anda.
+                </p>
+            </div>
+            <div id="penyakit1" class="penyakit1 disable">
+                <h3>Beberapa penyakit yang berasal dari berat badan yang berlebih:</h3>
+                <ol>
+                    <li>Diabetes</li>
+                    <li>Hipertensi</li>
+                    <li>Sakit Jantung</li>
+                    <li>Osteoarthritis</li>
+                </ol>
+            </div>
+            <div id="penyakit2" class="penyakit2 disable">
+                <h3>Penyakit yang berasal dari berat badan yang kurang:</h3>
+                <ol>
+                    <li>Anemia</li>
+                    <li>Infertilitas</li>
+                    <li>Imunitas Tubuh Menurun</li>
+                    <li>Osteoporosis</li>
+                </ol>
+            </div>
+            <div class="footer-identity">
+                <p>Download Aplikasi</p>
+                <div class="mobile-apps">
+                    <img src="./img/Google_Play_Store_Badge.png" alt="Image" height="42" width="142" />
+                    <img src="./img/AppStore_Badge.png" alt="Image" height="42" width="142" />
+                </div>
+                <p>
+                Software Engineering Fundamental Course | RevoU
+                <br>
+                Imaduddin Zakky Azizi | zakky.jbg@gmail.com
+                <br>
+                2023
+                </p>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,122 @@
+body{
+    background-color: rgb(96, 104, 106);
+}
+
+h1, h2, h3, h4, p, span, a, li{
+    font-family:"sans-serif";
+    color: azure;
+}
+
+a{
+    text-decoration: none;
+}
+
+.text1{
+    font-weight: bold;
+    font-family:"Roboto";
+}
+
+.text2{
+    width:97%;
+    padding-top:4px;
+    padding-bottom:4px;
+    padding-left:4px;
+    padding-right:4px;
+    margin-top:6px;
+    
+}
+
+.main_button{
+    margin-top:6px;
+    color:azure;
+    background-color:rgb(113, 145, 146);
+    padding:6px;
+    padding-left:10px;
+    padding-right:10px;
+    border: none;
+    border-radius: 4px;
+    cursor:pointer;
+}
+
+.reset_button{
+    padding:8px;
+    border: none;
+    border-radius: 4px;
+    cursor:pointer;
+    background-color:ivory;
+    color: rgb(96, 104, 106);
+
+}
+
+#kalkulator, #hasil{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right:20%;
+    padding-left:20%;
+}
+
+#hasil{
+    display: none;
+}
+
+.radio_buttons{
+    margin-left:-3px;
+    margin-top:3px;
+}
+
+.inputform_card, .hasil_card {
+    background-color: rgb(26, 26, 26);
+    padding: 12px;
+    color: azure;
+}
+
+.hasil_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main_button:hover{
+    background-color:rgb(223, 205, 195);
+    color: rgb(96, 104, 106);
+}
+
+.reset_button:hover{
+    background-color:firebrick;
+    color:azure;
+}
+
+#hasilBMI1{
+    font-size:36px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+/* querry */
+@media only screen and (max-width: 800px){
+    #calculator, #result{
+        padding-right:8%;
+        padding-left:8%;
+    }
+}
+
+.footer-identity {
+    font-size: 1em;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.penyakit1 .penyakit2 {
+    text-align: center;
+    line-height: 3em;
+  }
+.penyakit1 p, .penyakit2 p {
+    font-size: 1.2em;
+}
+
+.penyakit1 ol, .penyakit2 ol {
+  line-height: 1.5em;
+  list-style: none;
+  margin-bottom: 10px;
+}
